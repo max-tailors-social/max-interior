@@ -1,530 +1,1050 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
+<head>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <meta charset="UTF-8">
 
-html {
-    scroll-behavior: smooth;
-}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-body {
-    min-height: 100vh;
+    <meta name="description"
+          content="MAX Interior - Interior Design, Furniture and Custom Spaces">
 
-    font-family: 'Montserrat', sans-serif;
+    <title>MAX Interior | Interior Design & Furniture</title>
 
-    background:
-        radial-gradient(
-            circle at top,
-            #f3d8d8 0%,
-            #d9aeb1 35%,
-            #8f6267 72%,
-            #3c272b 100%
-        );
 
-    color: #3d292b;
-}
+    <style>
 
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
 
-/* ==============================
-   MAIN
-============================== */
 
-.page {
-    min-height: 100vh;
+        /* =========================================
+           RESET
+        ========================================= */
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    padding: 25px 15px;
-}
 
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* ==============================
-   MAIN CARD
-============================== */
 
-.card {
-    width: 100%;
-    max-width: 620px;
+        body {
 
-    position: relative;
+            min-height: 100vh;
 
-    padding: 55px 35px;
+            font-family: 'Montserrat', sans-serif;
 
-    text-align: center;
+            color: #493438;
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,248,246,0.98),
-            rgba(247,228,228,0.98)
-        );
+            background:
+                radial-gradient(
+                    circle at 20% 0%,
+                    #f9e7e8 0%,
+                    #e9c5c8 35%,
+                    #c68f95 68%,
+                    #714c52 100%
+                );
 
-    border: 1px solid #b88686;
+        }
 
-    border-radius: 6px;
 
-    box-shadow:
-        0 30px 80px rgba(61,39,42,0.35),
-        inset 0 0 50px rgba(170,110,115,0.08);
+        /* =========================================
+           PAGE
+        ========================================= */
 
-    overflow: hidden;
-}
+        .page {
 
+            min-height: 100vh;
 
-/* INNER BORDER */
+            display: flex;
 
-.card::before {
-    content: "";
+            justify-content: center;
 
-    position: absolute;
+            align-items: center;
 
-    inset: 10px;
+            padding: 20px 14px;
 
-    border: 1px solid rgba(155,99,105,0.35);
+        }
 
-    pointer-events: none;
-}
 
+        /* =========================================
+           MAIN CARD
+        ========================================= */
 
-/* ==============================
-   CORNERS
-============================== */
+        .card {
 
-.corner {
-    position: absolute;
+            width: 100%;
 
-    width: 50px;
-    height: 50px;
+            max-width: 620px;
 
-    border-color: #b88686;
+            position: relative;
 
-    border-style: solid;
+            overflow: hidden;
 
-    opacity: 0.8;
-}
+            padding: 50px 28px;
 
-.tl {
-    top: 18px;
-    left: 18px;
+            text-align: center;
 
-    border-width: 2px 0 0 2px;
-}
+            background:
 
-.tr {
-    top: 18px;
-    right: 18px;
+                linear-gradient(
+                    145deg,
+                    rgba(255, 249, 247, 0.98),
+                    rgba(247, 226, 228, 0.98)
+                );
 
-    border-width: 2px 2px 0 0;
-}
+            border: 1px solid #b77d83;
 
-.bl {
-    bottom: 18px;
-    left: 18px;
+            border-radius: 8px;
 
-    border-width: 0 0 2px 2px;
-}
+            box-shadow:
 
-.br {
-    bottom: 18px;
-    right: 18px;
+                0 30px 80px
+                rgba(70, 40, 45, 0.38),
 
-    border-width: 0 2px 2px 0;
-}
+                inset 0 0 50px
+                rgba(170, 95, 105, 0.08);
 
+        }
 
-/* ==============================
-   LOGO
-============================== */
 
-.logo {
-    width: 100px;
-    height: 100px;
+        /* =========================================
+           INNER FRAME
+        ========================================= */
 
-    margin: 0 auto 25px;
+        .card::before {
 
-    border: 2px solid #b88686;
+            content: "";
 
-    border-radius: 50%;
+            position: absolute;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            inset: 10px;
 
-    font-family: 'Cormorant Garamond', serif;
+            border: 1px solid
+                    rgba(165, 105, 112, 0.35);
 
-    font-size: 58px;
+            pointer-events: none;
 
-    font-weight: 700;
+        }
 
-    color: #8b555b;
 
-    background:
-        radial-gradient(
-            circle,
-            #fff8f6,
-            #eed0d1
-        );
+        /* =========================================
+           DECORATIVE CORNERS
+        ========================================= */
 
-    box-shadow:
-        0 0 30px rgba(145,82,90,0.18),
-        inset 0 0 25px rgba(145,82,90,0.08);
-}
+        .corner {
 
+            position: absolute;
 
-/* ==============================
-   BRAND
-============================== */
+            width: 52px;
 
-.brand-name {
-    font-family: 'Cormorant Garamond', serif;
+            height: 52px;
 
-    font-size: clamp(48px, 11vw, 78px);
+            border-color: #b77d83;
 
-    letter-spacing: 8px;
+            border-style: solid;
 
-    line-height: 0.9;
+            opacity: 0.8;
 
-    color: #4a3033;
+        }
 
-    text-transform: uppercase;
-}
 
-.brand-subtitle {
+        .top-left {
 
-    margin-top: 17px;
+            top: 18px;
 
-    font-family: 'Cormorant Garamond', serif;
+            left: 18px;
 
-    font-size: 25px;
+            border-width:
+                2px 0 0 2px;
 
-    letter-spacing: 8px;
+        }
 
-    color: #a56d73;
 
-    text-transform: uppercase;
-}
+        .top-right {
 
-.tagline {
+            top: 18px;
 
-    margin-top: 25px;
+            right: 18px;
 
-    font-size: 10px;
+            border-width:
+                2px 2px 0 0;
 
-    letter-spacing: 4px;
+        }
 
-    text-transform: uppercase;
 
-    color: #8d6d70;
-}
+        .bottom-left {
 
+            bottom: 18px;
 
-/* ==============================
-   DIVIDER
-============================== */
+            left: 18px;
 
-.divider {
+            border-width:
+                0 0 2px 2px;
 
-    display: flex;
+        }
 
-    align-items: center;
 
-    gap: 12px;
+        .bottom-right {
 
-    margin: 35px 20px;
-}
+            bottom: 18px;
 
-.divider::before,
-.divider::after {
+            right: 18px;
 
-    content: "";
+            border-width:
+                0 2px 2px 0;
 
-    height: 1px;
+        }
 
-    flex: 1;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #b88686
-        );
-}
+        /* =========================================
+           LOGO
+        ========================================= */
 
-.divider::after {
+        .logo {
 
-    background:
-        linear-gradient(
-            90deg,
-            #b88686,
-            transparent
-        );
-}
+            width: 105px;
 
-.diamond {
+            height: 105px;
 
-    width: 8px;
-    height: 8px;
+            margin: 0 auto 25px;
 
-    background: #b88686;
+            display: flex;
 
-    transform: rotate(45deg);
-}
+            justify-content: center;
 
+            align-items: center;
 
-/* ==============================
-   INTRO
-============================== */
+            border-radius: 50%;
 
-.intro h2 {
+            border: 2px solid #b77d83;
 
-    font-family: 'Cormorant Garamond', serif;
+            background:
 
-    font-size: 34px;
+                radial-gradient(
+                    circle,
+                    #fffaf8,
+                    #efd3d5
+                );
 
-    font-weight: 600;
+            color: #8d565d;
 
-    color: #573a3d;
-}
+            font-family:
+                'Cormorant Garamond',
+                serif;
 
-.intro p {
+            font-size: 62px;
 
-    max-width: 440px;
+            font-weight: 700;
 
-    margin: 15px auto 0;
+            box-shadow:
 
-    font-size: 13px;
+                0 10px 35px
+                rgba(115, 65, 72, 0.18),
 
-    line-height: 1.8;
+                inset 0 0 25px
+                rgba(160, 90, 100, 0.08);
 
-    color: #806b6d;
-}
+            animation:
 
+                logoFloat 4s
+                ease-in-out
+                infinite;
 
-/* ==============================
-   COMING SOON
-============================== */
+        }
 
-.coming-soon {
 
-    margin: 35px auto;
+        @keyframes logoFloat {
 
-    padding: 32px 22px;
+            0%,
+            100% {
 
-    border: 1px solid #c49396;
+                transform:
+                    translateY(0);
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,242,242,0.95),
-            rgba(234,201,203,0.75)
-        );
+            }
 
-    position: relative;
+            50% {
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-}
+                transform:
+                    translateY(-5px);
 
-.coming-soon:hover {
+            }
 
-    transform: translateY(-4px);
+        }
 
-    box-shadow:
-        0 12px 30px rgba(110,70,74,0.18);
-}
 
-.coming-icon {
+        /* =========================================
+           BRAND
+        ========================================= */
 
-    font-size: 40px;
+        .brand {
 
-    color: #ae747a;
+            position: relative;
 
-    margin-bottom: 15px;
-}
+            z-index: 2;
 
-.coming-soon h3 {
+        }
 
-    font-family: 'Cormorant Garamond', serif;
 
-    font-size: 28px;
+        .brand-name {
 
-    font-weight: 600;
+            font-family:
+                'Cormorant Garamond',
+                serif;
 
-    color: #573a3d;
+            font-size:
+                clamp(50px, 12vw, 82px);
 
-    margin-bottom: 10px;
-}
+            line-height: 0.85;
 
-.coming-soon p {
+            letter-spacing: 9px;
 
-    font-size: 12px;
+            color: #4c3035;
 
-    line-height: 1.8;
+            text-transform: uppercase;
 
-    color: #806b6d;
-}
+        }
 
 
-/* ==============================
-   SERVICES
-============================== */
+        .brand-subtitle {
 
-.services {
+            margin-top: 18px;
 
-    display: grid;
+            font-family:
+                'Cormorant Garamond',
+                serif;
 
-    grid-template-columns: repeat(3, 1fr);
+            font-size: 26px;
 
-    gap: 1px;
+            letter-spacing: 8px;
 
-    margin-top: 25px;
+            color: #a56870;
 
-    background: #c99b9e;
+            text-transform: uppercase;
 
-    border: 1px solid #c99b9e;
-}
+        }
 
-.service {
 
-    padding: 22px 8px;
+        .tagline {
 
-    background:
-        linear-gradient(
-            145deg,
-            #fff7f5,
-            #f1dcdc
-        );
-}
+            margin-top: 23px;
 
-.service-icon {
+            font-size: 10px;
 
-    font-size: 27px;
+            letter-spacing: 4px;
 
-    color: #a86d73;
+            color: #8a6d70;
 
-    margin-bottom: 9px;
-}
+            text-transform: uppercase;
 
-.service h4 {
+        }
 
-    font-family: 'Cormorant Garamond', serif;
 
-    font-size: 19px;
+        /* =========================================
+           DIVIDER
+        ========================================= */
 
-    font-weight: 600;
+        .divider {
 
-    color: #5b3d40;
-}
+            display: flex;
 
-.service p {
+            align-items: center;
 
-    margin-top: 5px;
+            gap: 12px;
 
-    font-size: 8px;
+            margin: 34px 20px;
 
-    letter-spacing: 1px;
+        }
 
-    text-transform: uppercase;
 
-    color: #907578;
-}
+        .divider::before,
+        .divider::after {
 
+            content: "";
 
-/* ==============================
-   FOOTER
-============================== */
+            height: 1px;
 
-footer {
+            flex: 1;
 
-    margin-top: 40px;
-}
+            background:
 
-.footer-line {
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #b77d83
+                );
 
-    height: 1px;
+        }
 
-    margin-bottom: 22px;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #b88686,
-            transparent
-        );
-}
+        .divider::after {
 
-footer p {
+            background:
 
-    font-family: 'Cormorant Garamond', serif;
+                linear-gradient(
+                    90deg,
+                    #b77d83,
+                    transparent
+                );
 
-    font-size: 21px;
+        }
 
-    letter-spacing: 3px;
 
-    color: #8e5c62;
-}
+        .diamond {
 
-footer small {
+            width: 9px;
 
-    display: block;
+            height: 9px;
 
-    margin-top: 10px;
+            background: #b77d83;
 
-    font-size: 8px;
+            transform: rotate(45deg);
 
-    letter-spacing: 2px;
+        }
 
-    text-transform: uppercase;
 
-    color: #9a7b7e;
-}
+        /* =========================================
+           INTRO
+        ========================================= */
 
+        .intro {
 
-/* ==============================
-   MOBILE
-============================== */
+            position: relative;
 
-@media (max-width: 520px) {
+            z-index: 2;
 
-    .page {
-        padding: 10px;
-    }
+        }
 
-    .card {
-        padding: 45px 20px;
-    }
 
-    .brand-name {
-        font-size: 48px;
-        letter-spacing: 5px;
-    }
+        .intro h2 {
 
-    .brand-subtitle {
-        font-size: 20px;
-        letter-spacing: 5px;
-    }
+            font-family:
+                'Cormorant Garamond',
+                serif;
 
-    .services {
-        grid-template-columns: 1fr;
-    }
+            font-size: 35px;
 
-    .service {
-        padding: 18px;
-    }
+            font-weight: 600;
 
-    .intro h2 {
-        font-size: 28px;
-    }
+            color: #5a3b40;
 
-}
+        }
 
-</style>
+
+        .intro p {
+
+            max-width: 450px;
+
+            margin: 14px auto 0;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            color: #806b6e;
+
+        }
+
+
+        /* =========================================
+           COMING SOON
+        ========================================= */
+
+        .coming-soon {
+
+            margin: 34px auto;
+
+            padding: 32px 22px;
+
+            position: relative;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(255, 246, 245, 0.96),
+                    rgba(235, 204, 207, 0.86)
+                );
+
+            border: 1px solid #c48d92;
+
+            box-shadow:
+
+                0 12px 35px
+                rgba(110, 70, 75, 0.12);
+
+            transition:
+
+                transform 0.3s ease,
+
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .coming-soon:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow:
+
+                0 18px 40px
+                rgba(110, 70, 75, 0.20);
+
+        }
+
+
+        .coming-icon {
+
+            font-size: 42px;
+
+            color: #a96770;
+
+            margin-bottom: 14px;
+
+        }
+
+
+        .coming-soon h3 {
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 29px;
+
+            font-weight: 600;
+
+            color: #593b40;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .coming-soon p {
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            color: #806c70;
+
+        }
+
+
+        /* =========================================
+           SERVICES
+        ========================================= */
+
+        .services {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 1px;
+
+            margin-top: 25px;
+
+            background: #c18b91;
+
+            border: 1px solid #c18b91;
+
+        }
+
+
+        .service {
+
+            padding: 23px 8px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    #fff9f7,
+                    #f2dddd
+                );
+
+            transition:
+
+                transform 0.3s ease,
+
+                background 0.3s ease;
+
+        }
+
+
+        .service:hover {
+
+            transform:
+                translateY(-3px);
+
+            background:
+                #fff5f4;
+
+        }
+
+
+        .service-icon {
+
+            font-size: 28px;
+
+            color: #a86870;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .service h4 {
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 19px;
+
+            font-weight: 600;
+
+            color: #5c3e43;
+
+        }
+
+
+        .service p {
+
+            margin-top: 5px;
+
+            font-size: 8px;
+
+            letter-spacing: 1px;
+
+            color: #907679;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =========================================
+           FUTURE SOCIAL MEDIA AREA
+        ========================================= */
+
+        .future {
+
+            margin-top: 28px;
+
+            padding: 18px;
+
+            border: 1px dashed #bd888e;
+
+            background:
+                rgba(255, 244, 243, 0.45);
+
+        }
+
+
+        .future-title {
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 21px;
+
+            color: #69474c;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .future-text {
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            color: #92777a;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            margin-top: 38px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .footer-line {
+
+            height: 1px;
+
+            margin-bottom: 21px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #b77d83,
+                    transparent
+                );
+
+        }
+
+
+        footer p {
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            font-size: 22px;
+
+            letter-spacing: 3px;
+
+            color: #905b63;
+
+        }
+
+
+        footer small {
+
+            display: block;
+
+            margin-top: 9px;
+
+            font-size: 8px;
+
+            letter-spacing: 2px;
+
+            color: #9a7b7e;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 520px) {
+
+            .page {
+
+                padding: 10px;
+
+            }
+
+
+            .card {
+
+                padding:
+                    44px 18px;
+
+            }
+
+
+            .brand-name {
+
+                font-size: 49px;
+
+                letter-spacing: 5px;
+
+            }
+
+
+            .brand-subtitle {
+
+                font-size: 20px;
+
+                letter-spacing: 5px;
+
+            }
+
+
+            .tagline {
+
+                font-size: 8px;
+
+                letter-spacing: 2.5px;
+
+            }
+
+
+            .intro h2 {
+
+                font-size: 28px;
+
+            }
+
+
+            .services {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .service {
+
+                padding: 18px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <main class="card">
+
+
+        <!-- Decorative corners -->
+
+        <div class="corner top-left"></div>
+
+        <div class="corner top-right"></div>
+
+        <div class="corner bottom-left"></div>
+
+        <div class="corner bottom-right"></div>
+
+
+        <!-- Brand -->
+
+        <section class="brand">
+
+
+            <div class="logo">
+                M
+            </div>
+
+
+            <div class="brand-name">
+                MAX
+            </div>
+
+
+            <div class="brand-subtitle">
+                Interior
+            </div>
+
+
+            <div class="tagline">
+                Interior Design • Furniture • Lifestyle
+            </div>
+
+
+        </section>
+
+
+        <!-- Divider -->
+
+        <div class="divider">
+
+            <div class="diamond"></div>
+
+        </div>
+
+
+        <!-- Introduction -->
+
+        <section class="intro">
+
+
+            <h2>
+                Designed For The Way You Live
+            </h2>
+
+
+            <p>
+
+                Thoughtfully designed interiors,
+                refined furniture and timeless spaces
+                created with attention to every detail.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- Coming Soon -->
+
+        <section class="coming-soon">
+
+
+            <div class="coming-icon">
+                ✦
+            </div>
+
+
+            <h3>
+                Our Digital World Is Coming
+            </h3>
+
+
+            <p>
+
+                Our social media and online portfolio
+                are currently being prepared.
+
+                Stay connected with MAX Interior
+                for upcoming projects, designs and inspiration.
+
+            </p>
+
+
+        </section>
+
+
+        <!-- Services -->
+
+        <section class="services">
+
+
+            <div class="service">
+
+
+                <div class="service-icon">
+                    ◈
+                </div>
+
+
+                <h4>
+                    Interior Design
+                </h4>
+
+
+                <p>
+                    Elegant Spaces
+                </p>
+
+
+            </div>
+
+
+            <div class="service">
+
+
+                <div class="service-icon">
+                    ◆
+                </div>
+
+
+                <h4>
+                    Furniture
+                </h4>
+
+
+                <p>
+                    Crafted Living
+                </p>
+
+
+            </div>
+
+
+            <div class="service">
+
+
+                <div class="service-icon">
+                    ✦
+                </div>
+
+
+                <h4>
+                    Custom Design
+                </h4>
+
+
+                <p>
+                    Made For You
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Future social media -->
+
+        <section class="future">
+
+
+            <div class="future-title">
+                Follow Our Journey
+            </div>
+
+
+            <div class="future-text">
+                SOCIAL MEDIA LINKS COMING SOON
+            </div>
+
+
+        </section>
+
+
+        <!-- Footer -->
+
+        <footer>
+
+
+            <div class="footer-line"></div>
+
+
+            <p>
+                MAX Interior
+            </p>
+
+
+            <small>
+                Creating spaces with character &amp; style
+            </small>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+</body>
+
+</html>
