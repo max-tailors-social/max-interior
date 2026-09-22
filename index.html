@@ -1,1050 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="MAX Interior - Interior Design, Furniture and Custom Spaces">
-
-    <title>MAX Interior | Interior Design & Furniture</title>
-
-
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap');
-
-
-        /* =========================================
-           RESET
-        ========================================= */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-
-        body {
-
-            min-height: 100vh;
-
-            font-family: 'Montserrat', sans-serif;
-
-            color: #493438;
-
-            background:
-                radial-gradient(
-                    circle at 20% 0%,
-                    #f9e7e8 0%,
-                    #e9c5c8 35%,
-                    #c68f95 68%,
-                    #714c52 100%
-                );
-
-        }
-
-
-        /* =========================================
-           PAGE
-        ========================================= */
-
-        .page {
-
-            min-height: 100vh;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            padding: 20px 14px;
-
-        }
-
-
-        /* =========================================
-           MAIN CARD
-        ========================================= */
-
-        .card {
-
-            width: 100%;
-
-            max-width: 620px;
-
-            position: relative;
-
-            overflow: hidden;
-
-            padding: 50px 28px;
-
-            text-align: center;
-
-            background:
-
-                linear-gradient(
-                    145deg,
-                    rgba(255, 249, 247, 0.98),
-                    rgba(247, 226, 228, 0.98)
-                );
-
-            border: 1px solid #b77d83;
-
-            border-radius: 8px;
-
-            box-shadow:
-
-                0 30px 80px
-                rgba(70, 40, 45, 0.38),
-
-                inset 0 0 50px
-                rgba(170, 95, 105, 0.08);
-
-        }
-
-
-        /* =========================================
-           INNER FRAME
-        ========================================= */
-
-        .card::before {
-
-            content: "";
-
-            position: absolute;
-
-            inset: 10px;
-
-            border: 1px solid
-                    rgba(165, 105, 112, 0.35);
-
-            pointer-events: none;
-
-        }
-
-
-        /* =========================================
-           DECORATIVE CORNERS
-        ========================================= */
-
-        .corner {
-
-            position: absolute;
-
-            width: 52px;
-
-            height: 52px;
-
-            border-color: #b77d83;
-
-            border-style: solid;
-
-            opacity: 0.8;
-
-        }
-
-
-        .top-left {
-
-            top: 18px;
-
-            left: 18px;
-
-            border-width:
-                2px 0 0 2px;
-
-        }
-
-
-        .top-right {
-
-            top: 18px;
-
-            right: 18px;
-
-            border-width:
-                2px 2px 0 0;
-
-        }
-
-
-        .bottom-left {
-
-            bottom: 18px;
-
-            left: 18px;
-
-            border-width:
-                0 0 2px 2px;
-
-        }
-
-
-        .bottom-right {
-
-            bottom: 18px;
-
-            right: 18px;
-
-            border-width:
-                0 2px 2px 0;
-
-        }
-
-
-        /* =========================================
-           LOGO
-        ========================================= */
-
-        .logo {
-
-            width: 105px;
-
-            height: 105px;
-
-            margin: 0 auto 25px;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            border-radius: 50%;
-
-            border: 2px solid #b77d83;
-
-            background:
-
-                radial-gradient(
-                    circle,
-                    #fffaf8,
-                    #efd3d5
-                );
-
-            color: #8d565d;
-
-            font-family:
-                'Cormorant Garamond',
-                serif;
-
-            font-size: 62px;
-
-            font-weight: 700;
-
-            box-shadow:
-
-                0 10px 35px
-                rgba(115, 65, 72, 0.18),
-
-                inset 0 0 25px
-                rgba(160, 90, 100, 0.08);
-
-            animation:
-
-                logoFloat 4s
-                ease-in-out
-                infinite;
-
-        }
-
-
-        @keyframes logoFloat {
-
-            0%,
-            100% {
-
-                transform:
-                    translateY(0);
-
-            }
-
-            50% {
-
-                transform:
-                    translateY(-5px);
-
-            }
-
-        }
-
-
-        /* =========================================
-           BRAND
-        ========================================= */
-
-        .brand {
-
-            position: relative;
-
-            z-index: 2;
-
-        }
-
-
-        .brand-name {
-
-            font-family:
-                'Cormorant Garamond',
-                serif;
-
-            font-size:
-                clamp(50px, 12vw, 82px);
-
-            line-height: 0.85;
-
-            letter-spacing: 9px;
-
-            color: #4c3035;
-
-            text-transform: uppercase;
-
-        }
-
-
-        .brand-subtitle {
-
-            margin-top: 18px;
-
-            font-family:
-                'Cormorant Garamond',
-                serif;
-
-            font-size: 26px;
-
-            letter-spacing: 8px;
-
-            color: #a56870;
-
-            text-transform: uppercase;
-
-        }
-
-
-        .tagline {
-
-            margin-top: 23px;
-
-            font-size: 10px;
-
-            letter-spacing: 4px;
-
-            color: #8a6d70;
-
-            text-transform: uppercase;
-
-        }
-
-
-        /* =========================================
-           DIVIDER
-        ========================================= */
-
-        .divider {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            margin: 34px 20px;
-
-        }
-
-
-        .divider::before,
-        .divider::after {
-
-            content: "";
-
-            height: 1px;
-
-            flex: 1;
-
-            background:
-
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    #b77d83
-                );
-
-        }
-
-
-        .divider::after {
-
-            background:
-
-                linear-gradient(
-                    90deg,
-                    #b77d83,
-                    transparent
-                );
-
-        }
-
-
-        .diamond {
-
-            width: 9px;
-
-            height: 9px;
-
-            background: #b77d83;
-
-            transform: rotate(45deg);
-
-        }
-
-
-        /* =========================================
-           INTRO
-        ========================================= */
-
-        .intro {
-
-            position: relative;
-
-            z-index: 2;
-
-        }
-
-
-        .intro h2 {
-
-            font-family:
-                'Cormorant Garamond',
-                serif;
-
-            font-size: 35px;
-
-            font-weight: 600;
-
-            color: #5a3b40;
-
-        }
-
-
-        .intro p {
-
-            max-width: 450px;
-
-            margin: 14px auto 0;
-
-            font-size: 13px;
-
-            line-height: 1.9;
-
-            color: #806b6e;
-
-        }
-
-
-        /* =========================================
-           COMING SOON
-        ========================================= */
-
-        .coming-soon {
-
-            margin: 34px auto;
-
-            padding: 32px 22px;
-
-            position: relative;
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    rgba(255, 246, 245, 0.96),
-                    rgba(235, 204, 207, 0.86)
-                );
-
-            border: 1px solid #c48d92;
-
-            box-shadow:
-
-                0 12px 35px
-                rgba(110, 70, 75, 0.12);
-
-            transition:
-
-                transform 0.3s ease,
-
-                box-shadow 0.3s ease;
-
-        }
-
-
-        .coming-soon:hover {
-
-            transform:
-                translateY(-5px);
-
-            box-shadow:
-
-                0 18px 40px
-                rgba(110, 70, 75, 0.20);
-
-        }
-
-
-        .coming-icon {
-
-            font-size: 42px;
-
-            color: #a96770;
-
-            margin-bottom: 14px;
-
-        }
-
-
-        .coming-soon h3 {
-
-            font-family:
-                'Cormorant Garamond',
-                serif;
-
-            font-size: 29px;
-
-            font-weight: 600;
-
-            color: #593b40;
-
-            margin-bottom: 10px;
-
-        }
-
-
-        .coming-soon p {
-
-            font-size: 12px;
-
-            line-height: 1.8;
-
-            color: #806c70;
-
-        }
-
-
-        /* =========================================
-           SERVICES
-        ========================================= */
-
-        .services {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 1px;
-
-            margin-top: 25px;
-
-            background: #c18b91;
-
-            border: 1px solid #c18b91;
-
-        }
-
-
-        .service {
-
-            padding: 23px 8px;
-
-            background:
-
-                linear-gradient(
-                    145deg,
-                    #fff9f7,
-                    #f2dddd
-                );
-
-            transition:
-
-                transform 0.3s ease,
-
-                background 0.3s ease;
-
-        }
-
-
-        .service:hover {
-
-            transform:
-                translateY(-3px);
-
-            background:
-                #fff5f4;
-
-        }
-
-
-        .service-icon {
-
-            font-size: 28px;
-
-            color: #a86870;
-
-            margin-bottom: 9px;
-
-        }
-
-
-        .service h4 {
-
-            font-family:
-                'Cormorant Garamond',
-                serif;
-
-            font-size: 19px;
-
-            font-weight: 600;
-
-            color: #5c3e43;
-
-        }
-
-
-        .service p {
-
-            margin-top: 5px;
-
-            font-size: 8px;
-
-            letter-spacing: 1px;
-
-            color: #907679;
-
-            text-transform: uppercase;
-
-        }
-
-
-        /* =========================================
-           FUTURE SOCIAL MEDIA AREA
-        ========================================= */
-
-        .future {
-
-            margin-top: 28px;
-
-            padding: 18px;
-
-            border: 1px dashed #bd888e;
-
-            background:
-                rgba(255, 244, 243, 0.45);
-
-        }
-
-
-        .future-title {
-
-            font-family:
-                'Cormorant Garamond',
-                serif;
-
-            font-size: 21px;
-
-            color: #69474c;
-
-            margin-bottom: 7px;
-
-        }
-
-
-        .future-text {
-
-            font-size: 10px;
-
-            letter-spacing: 1px;
-
-            color: #92777a;
-
-        }
-
-
-        /* =========================================
-           FOOTER
-        ========================================= */
-
-        footer {
-
-            margin-top: 38px;
-
-            position: relative;
-
-            z-index: 2;
-
-        }
-
-
-        .footer-line {
-
-            height: 1px;
-
-            margin-bottom: 21px;
-
-            background:
-
-                linear-gradient(
-                    90deg,
-                    transparent,
-                    #b77d83,
-                    transparent
-                );
-
-        }
-
-
-        footer p {
-
-            font-family:
-                'Cormorant Garamond',
-                serif;
-
-            font-size: 22px;
-
-            letter-spacing: 3px;
-
-            color: #905b63;
-
-        }
-
-
-        footer small {
-
-            display: block;
-
-            margin-top: 9px;
-
-            font-size: 8px;
-
-            letter-spacing: 2px;
-
-            color: #9a7b7e;
-
-            text-transform: uppercase;
-
-        }
-
-
-        /* =========================================
-           MOBILE
-        ========================================= */
-
-        @media (max-width: 520px) {
-
-            .page {
-
-                padding: 10px;
-
-            }
-
-
-            .card {
-
-                padding:
-                    44px 18px;
-
-            }
-
-
-            .brand-name {
-
-                font-size: 49px;
-
-                letter-spacing: 5px;
-
-            }
-
-
-            .brand-subtitle {
-
-                font-size: 20px;
-
-                letter-spacing: 5px;
-
-            }
-
-
-            .tagline {
-
-                font-size: 8px;
-
-                letter-spacing: 2.5px;
-
-            }
-
-
-            .intro h2 {
-
-                font-size: 28px;
-
-            }
-
-
-            .services {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-            .service {
-
-                padding: 18px;
-
-            }
-
-        }
-
-    </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MAX Interior — Premium interior design, bespoke furniture and custom spaces.">
+<title>MAX Interior | Luxury Interior & Furniture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#080808;--panel:#111;--gold:#d4af5a;--gold2:#f1d58a;--cream:#f4efe5;--muted:#aaa;--line:rgba(212,175,90,.3)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,sans-serif;background:var(--black);color:var(--cream);line-height:1.7}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.nav{position:sticky;top:0;z-index:50;background:rgba(8,8,8,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:700 34px/1 Cormorant Garamond,serif;letter-spacing:5px;color:var(--gold)}
+.logo span{display:block;font:500 9px Montserrat,sans-serif;letter-spacing:5px;color:#eee;margin-top:5px}
+.links{display:flex;gap:28px;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.links a:hover{color:var(--gold)}
+.hero{min-height:760px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.35)),url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(transparent,var(--black))}
+.hero-content{position:relative;z-index:2;max-width:720px;padding:100px 0}
+.eyebrow{color:var(--gold);letter-spacing:5px;font-size:11px;text-transform:uppercase;margin-bottom:22px}
+h1{font:600 clamp(60px,9vw,112px)/.88 Cormorant Garamond,serif;letter-spacing:2px}
+h1 em{color:var(--gold);font-style:normal}
+.hero p{max-width:600px;margin:28px 0;color:#ddd;font-size:15px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 25px;border:1px solid var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:.25s}
+.btn.gold{background:var(--gold);color:#080808}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(212,175,90,.2)}
+.section{padding:100px 0}
+.section-head{margin-bottom:42px}
+.kicker{font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
+h2{font:600 clamp(42px,6vw,68px)/1 Cormorant Garamond,serif;margin-top:8px}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.intro-img{height:520px;background:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85") center/cover;border:1px solid var(--line)}
+.intro-copy p{color:#bbb;margin:22px 0;max-width:530px}
+.gold-line{width:70px;height:1px;background:var(--gold);margin:22px 0}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.service{background:#0e0e0e;padding:42px 30px;min-height:245px;transition:.3s}
+.service:hover{background:#15130e;transform:translateY(-5px)}
+.num{color:var(--gold);font-size:12px;letter-spacing:2px}
+.service h3{font:600 32px Cormorant Garamond,serif;margin:30px 0 10px}
+.service p{color:#999;font-size:13px}
+.gallery{display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:250px 250px;gap:12px}
+.gallery div{background-size:cover;background-position:center;border:1px solid #222}
+.g1{grid-row:span 2;background-image:url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85")}
+.g2{background-image:url("https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=800&q=85")}
+.g3{background-image:url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=85")}
+.g4{background-image:url("https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=800&q=85")}
+.g5{background-image:url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=85")}
+.quote{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:75px 20px;text-align:center}
+.quote p{font:500 clamp(32px,5vw,58px)/1.05 Cormorant Garamond,serif;max-width:900px;margin:auto}
+.quote span{display:block;margin-top:25px;color:var(--gold);font-size:10px;letter-spacing:4px}
+.contact{background:#0d0d0d;border:1px solid var(--line);padding:55px;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact p{color:#aaa;margin:15px 0 28px}
+.contact-links{display:grid;gap:12px}
+.contact-links a{padding:16px 18px;border:1px solid #2c2c2c;font-size:12px;letter-spacing:1px}
+.contact-links a:hover{border-color:var(--gold);color:var(--gold)}
+footer{padding:45px 0;border-top:1px solid #222;text-align:center;color:#777;font-size:10px;letter-spacing:2px}
+@media(max-width:800px){.links{display:none}.hero{min-height:680px}.intro,.contact{grid-template-columns:1fr}.intro-img{height:400px}.services{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 220px}.g1{grid-row:auto;grid-column:span 2}.contact{padding:30px}}
+</style>
 </head>
-
-
 <body>
-
-
-<div class="page">
-
-
-    <main class="card">
-
-
-        <!-- Decorative corners -->
-
-        <div class="corner top-left"></div>
-
-        <div class="corner top-right"></div>
-
-        <div class="corner bottom-left"></div>
-
-        <div class="corner bottom-right"></div>
-
-
-        <!-- Brand -->
-
-        <section class="brand">
-
-
-            <div class="logo">
-                M
-            </div>
-
-
-            <div class="brand-name">
-                MAX
-            </div>
-
-
-            <div class="brand-subtitle">
-                Interior
-            </div>
-
-
-            <div class="tagline">
-                Interior Design • Furniture • Lifestyle
-            </div>
-
-
-        </section>
-
-
-        <!-- Divider -->
-
-        <div class="divider">
-
-            <div class="diamond"></div>
-
-        </div>
-
-
-        <!-- Introduction -->
-
-        <section class="intro">
-
-
-            <h2>
-                Designed For The Way You Live
-            </h2>
-
-
-            <p>
-
-                Thoughtfully designed interiors,
-                refined furniture and timeless spaces
-                created with attention to every detail.
-
-            </p>
-
-
-        </section>
-
-
-        <!-- Coming Soon -->
-
-        <section class="coming-soon">
-
-
-            <div class="coming-icon">
-                ✦
-            </div>
-
-
-            <h3>
-                Our Digital World Is Coming
-            </h3>
-
-
-            <p>
-
-                Our social media and online portfolio
-                are currently being prepared.
-
-                Stay connected with MAX Interior
-                for upcoming projects, designs and inspiration.
-
-            </p>
-
-
-        </section>
-
-
-        <!-- Services -->
-
-        <section class="services">
-
-
-            <div class="service">
-
-
-                <div class="service-icon">
-                    ◈
-                </div>
-
-
-                <h4>
-                    Interior Design
-                </h4>
-
-
-                <p>
-                    Elegant Spaces
-                </p>
-
-
-            </div>
-
-
-            <div class="service">
-
-
-                <div class="service-icon">
-                    ◆
-                </div>
-
-
-                <h4>
-                    Furniture
-                </h4>
-
-
-                <p>
-                    Crafted Living
-                </p>
-
-
-            </div>
-
-
-            <div class="service">
-
-
-                <div class="service-icon">
-                    ✦
-                </div>
-
-
-                <h4>
-                    Custom Design
-                </h4>
-
-
-                <p>
-                    Made For You
-                </p>
-
-
-            </div>
-
-
-        </section>
-
-
-        <!-- Future social media -->
-
-        <section class="future">
-
-
-            <div class="future-title">
-                Follow Our Journey
-            </div>
-
-
-            <div class="future-text">
-                SOCIAL MEDIA LINKS COMING SOON
-            </div>
-
-
-        </section>
-
-
-        <!-- Footer -->
-
-        <footer>
-
-
-            <div class="footer-line"></div>
-
-
-            <p>
-                MAX Interior
-            </p>
-
-
-            <small>
-                Creating spaces with character &amp; style
-            </small>
-
-
-        </footer>
-
-
-    </main>
-
-
-</div>
-
-
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#">MAX<span>INTERIOR • FURNITURE</span></a>
+    <div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">Luxury Interior Design • Bespoke Furniture</div>
+    <h1>Spaces made<br>to feel <em>extraordinary.</em></h1>
+    <p>We create refined interiors and custom furniture where timeless design, premium craftsmanship and your personality come together.</p>
+    <div class="btns">
+      <a class="btn gold" href="https://wa.me/916350043186?text=Hello%20MAX%20Interior%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Your Appointment</a>
+      <a class="btn" href="#portfolio">View Our Work</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="section" id="about"><div class="container intro">
+  <div class="intro-img"></div>
+  <div class="intro-copy"><div class="kicker">The MAX Philosophy</div><h2>Luxury is in the details.</h2><div class="gold-line"></div>
+  <p>From a single statement piece to a complete interior, MAX Interior brings together thoughtful planning, elegant materials and functional design.</p>
+  <p>Our goal is simple: build spaces that look beautiful today and still feel timeless tomorrow.</p>
+  <a class="btn" href="mailto:maxinterior2007@gmail.com">Talk To Us</a></div>
+</div></section>
+
+<section class="section" id="services"><div class="container">
+  <div class="section-head"><div class="kicker">What We Create</div><h2>Design. Craft. Character.</h2></div>
+  <div class="services">
+    <article class="service"><div class="num">01</div><h3>Interior Design</h3><p>Complete residential and commercial interiors with a refined, cohesive visual language.</p></article>
+    <article class="service"><div class="num">02</div><h3>Custom Furniture</h3><p>Made-to-measure furniture designed around your space, lifestyle and aesthetic.</p></article>
+    <article class="service"><div class="num">03</div><h3>Turnkey Spaces</h3><p>From concept to finishing touches, we coordinate every detail of your transformation.</p></article>
+  </div>
+</div></section>
+
+<section class="section" id="portfolio"><div class="container">
+  <div class="section-head"><div class="kicker">Selected Inspiration</div><h2>Interiors with a signature.</h2></div>
+  <div class="gallery"><div class="g1"></div><div class="g2"></div><div class="g3"></div><div class="g4"></div><div class="g5"></div></div>
+</div></section>
+
+<section class="quote"><p>“Good design is not just what you see. It is how the space makes you live, feel and remember.”</p><span>MAX INTERIOR</span></section>
+
+<section class="section" id="contact"><div class="container contact">
+  <div><div class="kicker">Start Your Project</div><h2>Let's create something remarkable.</h2><p>Ready to discuss your home, office or custom furniture project? Connect with MAX Interior today.</p></div>
+  <div class="contact-links">
+    <a href="https://wa.me/916350043186?text=Hello%20MAX%20Interior%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">💬 Book Your Appointment on WhatsApp</a>
+    <a href="mailto:maxinterior2007@gmail.com">✉ Email: maxinterior2007@gmail.com</a>
+    <a href="https://www.instagram.com/max_interior_furniture?stkn=dXFvMzlkMG0zemFz" target="_blank" rel="noopener">◎ Follow MAX Interior on Instagram</a>
+  </div>
+</div></section>
+</main>
+
+<footer>© 2026 MAX INTERIOR • INTERIOR DESIGN • FURNITURE • CUSTOM SPACES</footer>
 </body>
-
 </html>
